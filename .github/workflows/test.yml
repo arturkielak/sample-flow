@@ -9,6 +9,19 @@ on:
   #schedule:
   #  - cron: "*/5 * * * *"
   workflow_dispatch:
+    inputs:
+      customer:
+        description: "Pleas select"
+        required: true
+        type: choice
+        options:
+          - ULTRA_HACK
+          - ULTRA_BOX
+          - ULTRA_FUCK
+      operator_name:
+        description: "Operator name"
+        type: string
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,3 +50,11 @@ jobs:
         run: |
           echo Luna barks
           echo Luna barks
+
+      - name: Test input
+        run: |
+          echo ""
+          echo ""
+        env:
+          CUSTOMER: ${{ inputs.customer }}
+          OPERATOR: ${{ inputs.operator }}
