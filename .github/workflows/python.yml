@@ -1,0 +1,16 @@
+name: python
+on:
+  push:
+    paths:
+      - ".github/workflows/python.yml"
+      - "pyup"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Check python version"
+        run: python -V
+      - name: "Check directory"
+        run: pwd
+      - name: "Chceckout"
+        uses: actions/checkout@v4
