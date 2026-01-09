@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: golang:1.21-alpine
     steps:
       - run: go build
         working-directory: ./web
