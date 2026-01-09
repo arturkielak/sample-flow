@@ -18,7 +18,7 @@ on:
           - ULTRA_HACK
           - ULTRA_BOX
           - ULTRA_FUCK
-      operator_name:
+      operator:
         description: "Operator name"
         type: string
         required: true
@@ -53,8 +53,8 @@ jobs:
 
       - name: Test input
         run: |
-          echo ""
-          echo ""
+          echo "${CUSTOMER}"
+          echo "${OPERATOR}"
         env:
           CUSTOMER: ${{ inputs.customer }}
           OPERATOR: ${{ inputs.operator }}
