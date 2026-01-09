@@ -1,0 +1,16 @@
+name: web
+on:
+  push:
+    paths:
+      - "./web"
+      - ".github/workflows/web.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: go build
+        working-directory: ./web
+      - run: go test
+        working-directory: ./web
