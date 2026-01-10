@@ -24,3 +24,11 @@ jobs:
           python-version: '3.13'
       - name: "Check python version"
         run: python -V
+      - name: "Install python dependencies"
+        uses: py-actions/py-dependency-install@v4
+        with:
+          path: "pyup/requirements.txt"
+          update-pip: 'true'
+      - name: "Run tests"
+        working-directory: pyup
+        run: pytest -v
