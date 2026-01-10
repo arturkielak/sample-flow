@@ -12,5 +12,7 @@ jobs:
         run: python -V
       - name: "Check directory"
         run: pwd
+      - name: "List directory"
+        run: ls -la
       - name: "Chceckout"
         uses: actions/checkout@v4
