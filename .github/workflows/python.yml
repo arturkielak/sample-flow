@@ -4,6 +4,8 @@ on:
     paths:
       - ".github/workflows/python.yml"
       - "pyup"
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
