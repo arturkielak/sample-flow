@@ -1,0 +1,12 @@
+
+name: Sample CI
+
+# Controls when the workflow will run
+on:
+  push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show env
+        run: env
