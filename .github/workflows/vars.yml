@@ -1,5 +1,5 @@
 
-name: Sample CI
+name: Vars
 
 # Controls when the workflow will run
 on:
